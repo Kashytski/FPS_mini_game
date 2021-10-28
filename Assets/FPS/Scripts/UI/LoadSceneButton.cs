@@ -8,7 +8,8 @@ namespace Unity.FPS.UI
 {
     public class LoadSceneButton : MonoBehaviour
     {
-        List<string> scenes = new List<string> {"Level_1", "Level_2", "Level_3", "Level_4", "Level_5"}; 
+        List<string> scenes = new List<string> {"Level_1", "Level_2", "Level_3", "Level_4", "Level_5"};
+        int numScene;
 
         void Update()
         {
@@ -21,9 +22,16 @@ namespace Unity.FPS.UI
 
         public void LoadTargetScene()
         {
-            string currScene = PlayerPrefs.GetString("scene");
-            int numScene = scenes.IndexOf(currScene) + 1;
-            if (numScene == 5) numScene = 1;
+            Scene currScene = SceneManager.GetActiveScene();
+            string pastScene = PlayerPrefs.GetString("scene");
+            numScene = scenes.IndexOf(pastScene) + 1;
+
+            if (currScene.name == "NewIntroMenu" || numScene == 5)
+            {
+                numScene = 0;
+            }
+
+            Debug.Log(scenes[numScene]);
             SceneManager.LoadScene(scenes[numScene]);
         }
     }
