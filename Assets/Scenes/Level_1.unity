@@ -2924,10 +2924,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_9x9
       objectReference: {fileID: 0}
+    - target: {fileID: 6671635094191309385, guid: 9b7d8a511d161be4d9c32aae2e937170,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.01
+      objectReference: {fileID: 0}
     - target: {fileID: 8779659660085782080, guid: 9b7d8a511d161be4d9c32aae2e937170,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.977
+      value: 3.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b7d8a511d161be4d9c32aae2e937170, type: 3}
@@ -6221,7 +6226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2729281213600907713}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55, y: -2, z: -7.4}
+  m_LocalPosition: {x: -55, y: -2, z: -7.432}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 682120766}
