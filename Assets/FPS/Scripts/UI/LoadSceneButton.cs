@@ -25,13 +25,13 @@ namespace Unity.FPS.UI
             Scene currScene = SceneManager.GetActiveScene();
             string pastScene = PlayerPrefs.GetString("scene");
             numScene = scenes.IndexOf(pastScene) + 1;
-            int boolState = 0;
-            if (currScene.name == "NewIntroMenu" || currScene.name == "NewLoseScene")
+
+            if (currScene.name == "LoseScene")
             {
-                boolState = 1;
+                numScene--;
             }
 
-            if (boolState == 1  || numScene == 5)
+            if (currScene.name == "MenuScene" || numScene == 5)
             {
                 numScene = 0;
             }
